@@ -12,11 +12,12 @@ export default function Mensajes() {
  * incluirlo en el estado, mensaje que será un 
  * objeto con las propiedades: asunto, email y mensaje
 */ 
-  let nuevoMensaje = () => {
+  let nuevoMensaje = (data) => {
+    console.log(data);
     let nuevo = {
-      "asunto": "Prueba",
-      "email": "email@email.com",
-      "mensaje": `Este es un mensaje de pruebas... ${Math.random()}`,
+      "asunto": data.asunto,
+      "email": data.email,
+      "mensaje": data.mensaje,
       "leido": false
     };
     
